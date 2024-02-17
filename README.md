@@ -13,4 +13,38 @@ Similarities are other features of DCL. For example, a hash in your system or an
 
 The purpose of DCL is to disappoint hackers and safeguard your private data.
 
+## How to use 
+
+**PHP**
+```php
+$key = "mykey12345";
+$alpha = 6;
+$plaintext = "userdata12345";
+$dclInstance = new DCL($key, $alpha);
+$result = $dclInstance->generate($plaintext);
+echo $result . PHP_EOL;
+```
+**Python**
+```python
+key = "mykey12345"
+alpha = 6
+plaintext = input("> ")
+dcl_instance = DCL(key, alpha)
+result = dcl_instance.generate(plaintext)
+print(result)
+```
+**Visual Basic .Net**
+```c#
+Console.Write("> ")
+Dim dcl As New dcl("mykey12345", 6)
+Console.Write(dcl.generate(Console.ReadLine()))
+```
+**Javascript**
+```c#
+const  dclInstance  =  new  DCL("mykey12345", 6);
+const  ciphertext  =  dclInstance.generate("mypassword");
+console.log(ciphertext);
+```
+
+
 DCL will be released soon. Other languages’ libraries will be developed and it is all open source.
